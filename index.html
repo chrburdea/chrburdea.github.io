@@ -10,7 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta property="og:image" content="images/avatar.jpg">
-		<link rel="stylesheet" href="assets/css/main.css"/>
+		<link rel="stylesheet" href="assets/css/main.css"/> 
 		<link rel="image_src" href="images/avatar.jpg">
 		<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 	</head>
@@ -27,6 +27,7 @@
 				<nav id="nav">
 					<ul>
 						<li><a href="#one" class="active">About</a></li>
+						<li><a href="#two">Collision Detection with QuadTree</a></li>
 						<li><a href="#three">Vehicle Scheduling with Reinforcement Learning</a></li>
 						<li><a href="#four">Hand Measuring with OpenCV</a></li>
 						<li><a href="#five">Pilot Route Predictions with Machine Learning</a></li>
@@ -61,17 +62,52 @@
 								<div class="container">
 									<header class="major">
 										<h2>Hi, I am Christian!</h2>
-										<p>I work on various types of analytical and optimizational topics with a backgroud in OT and AI</p>
+										<p>I am a Solution Architect and I work on various types of analytical and optimizational topics with a backgroud in OT and AI</p>
 									</header>
 									<ul class="feature-icons">
 										<li class="icon brands fa-linkedin"><a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/cburdea"><span class="label">LinkedIn</span></a></li>
 										<li class="icon solid fa-envelope"><a href="mailto:christian.burdea@fu-berlin.de"><span class="label">E-Mail</span></a></li>
 									</ul>
-									<p>In 4.5 years of my professional journey, I have gained experience in several settings and industries. One topic that consistently accompanies me is analytics and optimization out of which I have carried out a few interesting projects that are compiled here.</p>
+									<p>In 4.5 years of my professional journey, I have gained experience in several settings and industries. One topic that consistently accompanies me is analytics and optimization out of which I have carried out a few interesting private projects that are compiled here.</p>
 								</div>
 							</section>
 
 						<!-- Two -->
+							<section id="two">
+								<div class="container">
+									<h3>Collision Detection with QuadTree</h3>
+									<p>Technologies: HTML5, JavaScript</p>
+									<div class="features">
+										<article>
+											<a class="image">
+												<div>
+													<div id="window">
+														<canvas id="drawingCanvas" width="400" height="400"></canvas>
+													</div>
+													<div id="controlPanel">
+														<div id="slideContainer">
+															<div>Population size: </div>
+															<div id="populationSize">0</div>
+															<input type="range" min="0" max="250" value="100" class="slider" id="populationRangeSlider">
+														</div>
+														<div id="controlContainer">
+															<button type="button" id="reset">Reset</button>
+															<button type="button" id="start">Start</button>
+														</div>
+														
+													</div>
+												</div>    
+											</a>
+											<div class="inner">
+												<p>To allow for efficient simulations, data structures and algorithms need to be implemented to allow performance with an increasing range of entities. In this example I am using the example of the widely known game of Rock Paper Scissors. In a more serious manner, this kind of simulation is used to explain cyclic dominance in biology where species dominate each other in a repeating pattern. With enough tries, you will also be able to create a balance where the simulation never stops.
+													<br>
+													<br>To allow for performance at scale, a QuadTree is implemented and indicated using the white squared pattern in the background. It allows to calculate collision detection in a runtime of O(logn) as it only processes the elements right next to an element in neighbouring squares. Furthermore, a gravity simulation is added to allow elements to seek each other.
+												</p>
+											</div>
+										</article>
+									</div>
+								</div>
+							</section>
 
 						<!-- Three -->
 							<section id="three">
@@ -89,7 +125,7 @@
 											<div class="inner">
 												<p>Operational costs in public bus transportation are mainly influenced by personnel and bus operations. Therefore, planning needs to be as accurate as possible. Usually solved with heuristcs, my Master thesis uses reinforcement learning instead - a approach that had not been pursued in research thus far.
 													<br>
-													<br>Focusing on the Vehicle Scheduling Problem, the RL agent generalizes problems and to make it advantageous over heuristics which need repetitive customizations. The thesis showed, that Reinforcement Learning can be used to learn optimization tasks. With an optimiality gap of 23.17%, the performance was not satisfying and is related to the architecture of the agent. Therefore, more research will be neccesary. The full thesis can be accessed on my linkedIn page.	
+													<br>Focusing on the Vehicle Scheduling Problem, the RL agent generalizes problems and to make it advantageous over heuristics which need repetitive customizations. The thesis showed, that Reinforcement Learning can be used to learn optimization tasks. With an optimiality gap of 23.17%, the performance was not satisfying and is related to the architecture of the agent. Therefore, more research will be neccesary. The full thesis can be accessed on my <a href="https://www.linkedin.com/in/cburdea/overlay/1635496578759/single-media-viewer/?profileId=ACoAACShTjcBe2by8Ex46n3FXmiqU8Eak8_JCtM">LinkedIn</a> page.	
 												  </p>
 											</div>
 										</article>
@@ -248,6 +284,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script src="assets/js/rps_logic.js"></script>
+			<link rel="stylesheet" type="text/css" href="assets/css/rps_stylesheet.css"/>
 	</body>
 </html>

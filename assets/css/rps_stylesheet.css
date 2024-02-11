@@ -1,0 +1,35 @@
+#window{
+    /*border-style: dashed;*/
+}
+
+#drawingCanvas{
+    background-color: black;
+}
+
+#controlPanel #slideContainer{
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 400px !important;
+}
+
+#controlPanel #controlContainer{
+    /*border-style: dashed; */
+    margin: 0 !important;
+    display: flex !important;
+}
+
+#populationRangeSlider{
+    width: 250px !important;
+    height: 5px !important;
+    background-color: black;
+    /* padding: 5px !important; */
+}
+
+#controlPanel button{ 
+    width: 200px !important;
+    height: 40px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+}
